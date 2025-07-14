@@ -106,7 +106,7 @@ AWS コンソールが起動したら左上の検索ウィンドウに S3 と入
         "Effect": "Allow",
         "Principal": "*",
         "Action": "s3:GetObject", 
-        "Resource": "(バケットARN)/*"
+        "Resource": "ここにバケットARNをいれる"
         }
     ]
 }
