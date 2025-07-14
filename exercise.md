@@ -56,7 +56,8 @@ https://www.awsacademy.com/vforcesite/LMS_Login
 
 ### Amazon S3 
 
-AWS コンソールが起動したら左上の検索ウィンドウに S3 とうって、Amazon S3 のサービスを検索します。
+Amazon S3 は AWS のオブジェクトストレージのサービスで様々なデータを保管できるサービスです。
+AWS コンソールが起動したら左上の検索ウィンドウに S3 と入力して、Amazon S3 のサービスを検索します。
 
 <img width=600 src="./images/search_service.png" border =1>
 
@@ -119,3 +120,46 @@ AWS コンソールが起動したら左上の検索ウィンドウに S3 とう
 ではアクセスしてみましょう。**プロパティ**から一番下の**静的ウェブサイトホスティング**の項目をチェックするとURLが掲載されています。URLをクリックして、先程指定したHTMLファイルが表示されたら成功です。
 
 <img width=700 src="./images/check_hosting.png " border =1>
+
+このような感じで表示されましたか？
+
+<img width=500 src="./images/web_example.png " border =1>
+
+
+
+### Amazon CloudFront
+
+Amazon CloudFrontは、AWSが提供するコンテンツ配信ネットワーク（CDN）サービスです。ウェブサイトやアプリケーションのコンテンツを、世界中に分散されたエッジロケーションを通じて高速に配信することで、ユーザーのアクセス速度を向上させることができます。
+
+まず左上の検索ウィンドウから CloudFront を検索します。
+
+<img width=500 src="./images/cloudfront.png " border =1>
+
+CloudFront の画面を開いたら、CloudFront ディストリビューションを作成します。
+
+<img width=500 src="./images/create_dist.png" border =1>
+
+ディストリビューションの名前を設定して Nextをクリックします。
+
+<img width=500 src="./images/config_dist.png" border =1>
+
+次にオリジン、つまり CloudFront が参照するもとのファイルの場所を設定します。さきほどファイルを置いた**Amazon S3**を選び、S3 Origin は S3 で設定したバケットの場所を指定します（Browse S3 から選択できます)
+
+<img width=500 src="./images/set_origin.png" border =1>
+
+Enable Security のところは、**セキュリティ保護を有効にしないでください**を選択して、Next をクリックします。
+
+<img width=500 src="./images/set_security.png" border =1>
+
+最後にこれまでの確認しましょう。確認して間違いなければ Create distribution をクリックします。
+
+<img width=500 src="./images/confirm_config_dist.png" border =1>
+
+**もしホームページを index.htmlにしていない場合**はルートオブジェクトの設定が必要です。
+ディストリビューション一覧にもどると、作成したディストリビューションを確認できるので、ディストリビューション名をクリックします。**一般**タブを開いていることを確認し、**設定**から**編集**を選びます。Settings の画面下部の Default root object に、最初に表示すべきファイル名を入れます。
+
+<img width=500 src="./images/set_root_object.png" border =1>
+
+最後に確認しましょう。**一般**タブを開くと、ディストリビューションドメイン名があるので、これをコピーしてブラウザに貼り付けます。Amazon S3 で開いたウェブサイトと同じものが表示されれば成功です。実際に CloudFront で表示されるまでに少し時間がかかることがあります。
+
+<img width=500 src="./images/complete_and_check.png" border =1>
