@@ -105,14 +105,14 @@ AWS コンソールが起動したら左上の検索ウィンドウに S3 と入
         "Sid": "PublicReadForGetBucketObjects", 
         "Effect": "Allow",
         "Principal": "*",
-        "Action": "s3:GetObject", 
-        "Resource": "ここにバケットARNをいれる"
+        "Action": "s3:GetObject",
+        "Resource": "(バケットARN)/*"
         }
     ]
 }
 ```
 
-公開したいファイル (HTML, CSSなど)をアップロードします。上のタブの**オブジェクト**から**アップロード**ボタンをクリックするとファイルアップロード画面になります。ここに HTML, CSS, 画像 などをアップロードします。
+公開したいファイル (HTML, CSSなど)をアップロードします。上のタブの**オブジェクト**から**アップロード**ボタンをクリックするとファイルアップロード画面になります。ここに HTML, CSS, 画像 などをアップロードします。**ファイル名は英語にしてください**。
 
 <img width=700 src="./images/upload_files.png " border =1>
 
@@ -121,7 +121,7 @@ AWS コンソールが起動したら左上の検索ウィンドウに S3 と入
 
 <img width=700 src="./images/static_hosting.png " border =1>
 
-ではアクセスしてみましょう。**プロパティ**から一番下の**静的ウェブサイトホスティング**の項目をチェックするとURLが掲載されています。URLをクリックして、先程指定したHTMLファイルが表示されたら成功です。
+ではアクセスしてみましょう。**プロパティ**から一番下の**静的ウェブサイトホスティング**の項目をチェックするとURLが掲載されています。URLをクリックして、先程指定したHTMLファイルが表示されたら成功です。もしバケットにフォルダ （例えば `website`) を作成して、そこに html ファイルを置く場合は、URL最後に `/website/`を追加してアクセスします (例えば、http://(バケット名).s3-website-us-east-1.amazonaws.com/website/)
 
 <img width=700 src="./images/check_hosting.png " border =1>
 
@@ -147,7 +147,7 @@ CloudFront の画面を開いたら、CloudFront ディストリビューショ�
 
 <img width=500 src="./images/config_dist.png" border =1>
 
-次にオリジン、つまり CloudFront が参照するもとのファイルの場所を設定します。さきほどファイルを置いた**Amazon S3**を選び、S3 Origin は S3 で設定したバケットの場所を指定します（Browse S3 から選択できます)
+次にオリジン、つまり CloudFront が参照するもとのファイルの場所を設定します。さきほどファイルを置いた**Amazon S3**を選び、S3 Origin は S3 で設定したバケットの場所を指定します（Browse S3 から選択できます)。もし`website`のようなフォルダ以下に html ファイルを入れた場合は、**Original path** に `website` といれてください。
 
 <img width=500 src="./images/set_origin.png" border =1>
 
@@ -159,7 +159,7 @@ Enable Security のところは、**セキュリティ保護を有効にしな�
 
 <img width=500 src="./images/confirm_config_dist.png" border =1>
 
-**もしホームページを index.htmlにしていない場合**はルートオブジェクトの設定が必要です。
+次にアップロードしたファイルにルートからアクセスする場合はルートオブジェクトの設定が必要です。
 ディストリビューション一覧にもどると、作成したディストリビューションを確認できるので、ディストリビューション名をクリックします。**一般**タブを開いていることを確認し、**設定**から**編集**を選びます。Settings の画面下部の Default root object に、最初に表示すべきファイル名を入れます。
 
 <img width=500 src="./images/set_root_object.png" border =1>
