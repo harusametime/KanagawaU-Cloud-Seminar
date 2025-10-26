@@ -1,4 +1,4 @@
-<img width="443" height="404" alt="image" src="https://github.com/user-attachments/assets/6b023b82-0a78-44e0-adbb-2f5a1e440f11" />## 演習の目的
+# 演習の目的
 
 本コンテンツは神奈川大学 情報学部 実践的データサイエンス演習受講生向けに作られたページです。
 
@@ -33,8 +33,7 @@ https://www.awsacademy.com/vforcesite/LMS_Login
   
 次に  Module 2 - Introduction to Natural Language Processing (NLP) から 「Lab 2.1 - Applying ML to an NLP problem」を選択します。
 
-<img width="1344" height="1006" alt="image" src="https://github.com/user-attachments/assets/be73bd77-aa4f-4758-9374-d885ff522f32" />
-
+<img width="450" height="1006" alt="image" src="https://github.com/user-attachments/assets/be73bd77-aa4f-4758-9374-d885ff522f32" />
 
 
 ## AWS 環境の起動
