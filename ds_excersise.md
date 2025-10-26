@@ -1,4 +1,4 @@
-## 演習の目的
+<img width="443" height="404" alt="image" src="https://github.com/user-attachments/assets/6b023b82-0a78-44e0-adbb-2f5a1e440f11" />## 演習の目的
 
 本コンテンツは神奈川大学 情報学部 実践的データサイエンス演習受講生向けに作られたページです。
 
@@ -16,6 +16,7 @@ Python を使った情報検索の基本的な方法を学習します。Amazon 
 <img width=400 src="./images/account_creation.png">
 
 
+
 ## AWS Academy へのログイン
 
 アカウント登録が終わったら、以下のページから AWS Academy へログインします。Student Login を選んでください。
@@ -27,12 +28,13 @@ https://www.awsacademy.com/vforcesite/LMS_Login
 
 左のメニューからコースを選択し、AWS Academy Machine Learning for Natural Language Processing を選択します。
 
-<img width=600 src="./images/select_course.png" border =1>
+<img width="443" height="404" alt="image" src="https://github.com/user-attachments/assets/da893850-9d09-4a66-b5ed-62b45361eace" />
 
   
-次にモジュールから 「サンドボックス ラボ」を選択します。
+次に  Module 2 - Introduction to Natural Language Processing (NLP) から 「Lab 2.1 - Applying ML to an NLP problem」を選択します。
 
-<img width=600 src="./images/select_module.png"  border =1 >
+<img width="1344" height="1006" alt="image" src="https://github.com/user-attachments/assets/be73bd77-aa4f-4758-9374-d885ff522f32" />
+
 
 
 ## AWS 環境の起動
