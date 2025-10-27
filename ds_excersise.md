@@ -47,14 +47,54 @@ https://www.awsacademy.com/vforcesite/LMS_Login
 
 <img width=600 src="./images/start_lab.png">
 
-## AWS コンソールの操作
+## 演習内容
 
-### Amazon S3 
+### Amazon SageMaker AI　の起動
 
-Amazon S3 は AWS のオブジェクトストレージのサービスで様々なデータを保管できるサービスです。
-AWS コンソールが起動したら左上の検索ウィンドウに S3 と入力して、Amazon S3 のサービスを検索します。
+Amazon SageMaker AIは機械学習の開発・運用を効率化するサービスです。
+AWS コンソールが起動したら左上の検索ウィンドウに SageMaker AI と入力して、Amazon SageMaker AI のサービスを検索します。
+<img width="1025" height="271" alt="image" src="https://github.com/user-attachments/assets/6eaf2cb7-86a9-44c4-bd0c-b0188b08d65e" />
 
-<img width=600 src="./images/search_service.png" border =1>
+左のメニューから Notebooks を選択します。
+<img width="1482" height="990" alt="image" src="https://github.com/user-attachments/assets/5173717f-6da2-4e93-8df6-8d44b25b5a8d" />
+
+次に右の画面から Jupyter Lab をクリックします。
+<img width="2198" height="506" alt="image" src="https://github.com/user-attachments/assets/4b7ef17b-43bb-4a07-a2f6-6477a8951e1c" />
+
+Jupyter Labを開いたらconda_pytorch_p310を選んでノートブックを作成します。
+<img width="1900" height="742" alt="image" src="https://github.com/user-attachments/assets/40121107-5255-450d-babb-c8203772df41" />
+
+### Jupter Lab での演習
+以下はノートブックを作成しながら演習を行います。
+以下のようにコードをコピーペーストして、▶ボタンを押すか、Ctrl+Enter でコードを実行できます。
+<img width="668" height="167" alt="image" src="https://github.com/user-attachments/assets/76571829-c203-4f07-a2a9-ab5a4a379a94" />
+
+まずは以下のコードを貼り付けて実行します。日本語の wikipedia のデータをダウンロードします。
+
+```python
+!pip install --upgrade huggingface_hub
+import pandas as pd
+df = pd.read_json("hf://datasets/llm-book/japanese-wikipedia/ja_wiki.jsonl", nrows=1000, lines=True)
+```
+次のセルに以下のコードを貼り付けると最初の5行のデータを表示することができます。
+
+```python
+df.head(5)
+```
+
+表示するとわかりますが各行の text という列にテキストデータが入っています。ある行 i のテキストデータは `df.iloc[i]['text']`でアクセス可能です。
+もしキーワードが入っているか調べたい場合は `"キーワード" in df.iloc[i]['text']`で調べます。入っていれば True となります。
+では、
+
+まずはキーワードの一致で検索してみます。例えば、AI というキーワードで検索し、最初の100文字を表示するには以下のような実装ができます（もっと便利な実装はありますが今回は割愛します）
+```python
+for i in range(1000):
+    if "AI" in df.iloc[i]["text"]:
+        print(i, df.iloc[i]["text"][:100])
+```
+
+いろいろ結果をみてみると、ON THE AIR といった AI とは無関係なものも表示されます。
+
 
 まず最初にバケットの作成を行います。これまでの利用状況に応じて、トップ画面に「バケットを作成」ボタンがあったり、左のメニューの「バケット」からバケット一覧にアクセスして、「バケットを作成」ボタンを確認できたりします。
 
