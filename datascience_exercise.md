@@ -22,30 +22,30 @@ Python を使った情報検索の基本的な方法を学習します。Amazon 
 アカウント登録が終わったら、以下のページから AWS Academy へログインします。Student Login を選んでください。
 https://www.awsacademy.com/vforcesite/LMS_Login
 
-<img width=400 src="./images/login_page.png"> 
+<img width=400 border=1 src="./images/login_page.png"> 
 
 ## コースの選択とモジュールの選択
 
 左のメニューからコースを選択し、AWS Academy Machine Learning for Natural Language Processing を選択します。
 
-<img width="443" height="404" alt="image" src="https://github.com/user-attachments/assets/da893850-9d09-4a66-b5ed-62b45361eace" />
+<kbd><img width="443" height="404" alt="image" src="https://github.com/user-attachments/assets/da893850-9d09-4a66-b5ed-62b45361eace" /></kbd>
 
   
 次に  Module 2 - Introduction to Natural Language Processing (NLP) から 「Lab 2.1 - Applying ML to an NLP problem」を選択します。
 
-<img width="450" height="1006" alt="image" src="https://github.com/user-attachments/assets/be73bd77-aa4f-4758-9374-d885ff522f32" />
+<kbd><img width="450" height="1006" alt="image" src="https://github.com/user-attachments/assets/be73bd77-aa4f-4758-9374-d885ff522f32" /></kbd>
 
 
 ## AWS 環境の起動
 
 初回は同意事項に関するページが表示されますので、一番下までスクロールして I Agree をクリックし、同意してください。
 
-<img width=600 src="./images/agreement.png" border =1>
+<kbd><img width=600 src="./images/agreement.png"></kbd>
 
 するとサンドボックスの説明画面が開きます。右上のメニューから Start Lab ボタンをクリックすると、Labをスタートすることができます。ボタンを押すと環境構築中の別画面が開きますが、1-2分たったら閉じて問題ありません。AWS ボタンを押すとAWS コンソールの画面を開くことができます。
 もしAWSボタンを押してもAWSコンソール画面が開かない場合は、まだ環境構築中の可能性があるので、もう少し待ってみます。
 
-<img width=600 src="./images/start_lab.png">
+<kbd><img width=600 src="./images/start_lab.png"></kbd>
 
 ## 演習内容
 
@@ -54,25 +54,25 @@ https://www.awsacademy.com/vforcesite/LMS_Login
 Amazon SageMaker AIは機械学習の開発・運用を効率化するサービスです。
 AWS コンソールが起動したら左上の検索ウィンドウに SageMaker AI と入力して、Amazon SageMaker AI のサービスを検索します。
 
-<img width="525" height="271" alt="image" src="https://github.com/user-attachments/assets/6eaf2cb7-86a9-44c4-bd0c-b0188b08d65e" />
+<kbd><img width="525" height="271" alt="image" src="https://github.com/user-attachments/assets/6eaf2cb7-86a9-44c4-bd0c-b0188b08d65e" /></kbd>
 
 左のメニューから Notebooks を選択します。
 
-<img width="582" height="990" alt="image" src="https://github.com/user-attachments/assets/5173717f-6da2-4e93-8df6-8d44b25b5a8d" />
+<kbd><img width="582" height="990" alt="image" src="https://github.com/user-attachments/assets/5173717f-6da2-4e93-8df6-8d44b25b5a8d" /></kbd>
 
 次に右の画面から Jupyter Lab をクリックします。
 
-<img width="598" height="506" alt="image" src="https://github.com/user-attachments/assets/4b7ef17b-43bb-4a07-a2f6-6477a8951e1c" />
+<kbd><img width="598" height="506" alt="image" src="https://github.com/user-attachments/assets/4b7ef17b-43bb-4a07-a2f6-6477a8951e1c" /></kbd>
 
 Jupyter Labを開いたらconda_pytorch_p310を選んでノートブックを作成します。
 
-<img width="600" height="742" alt="image" src="https://github.com/user-attachments/assets/40121107-5255-450d-babb-c8203772df41" />
+<kbd><img width="600" height="742" alt="image" src="https://github.com/user-attachments/assets/40121107-5255-450d-babb-c8203772df41" /></kbd>
 
 ### Jupter Lab での演習
 以下はノートブックを作成しながら演習を行います。
 以下のようにコードをコピーペーストして、▶ボタンを押すか、Ctrl+Enter でコードを実行できます。
 
-<img width="668" height="167" alt="image" src="https://github.com/user-attachments/assets/76571829-c203-4f07-a2a9-ab5a4a379a94" />
+<kbd><img width="668" height="167" alt="image" src="https://github.com/user-attachments/assets/76571829-c203-4f07-a2a9-ab5a4a379a94" /></kbd>
 
 まずは以下のコードを貼り付けて実行します。日本語の wikipedia のデータをダウンロードします。
 
