@@ -53,16 +53,16 @@ https://www.awsacademy.com/vforcesite/LMS_Login
 
 Amazon SageMaker AIは機械学習の開発・運用を効率化するサービスです。
 AWS コンソールが起動したら左上の検索ウィンドウに SageMaker AI と入力して、Amazon SageMaker AI のサービスを検索します。
-<img width="1025" height="271" alt="image" src="https://github.com/user-attachments/assets/6eaf2cb7-86a9-44c4-bd0c-b0188b08d65e" />
+<img width="525" height="271" alt="image" src="https://github.com/user-attachments/assets/6eaf2cb7-86a9-44c4-bd0c-b0188b08d65e" />
 
 左のメニューから Notebooks を選択します。
-<img width="1482" height="990" alt="image" src="https://github.com/user-attachments/assets/5173717f-6da2-4e93-8df6-8d44b25b5a8d" />
+<img width="582" height="990" alt="image" src="https://github.com/user-attachments/assets/5173717f-6da2-4e93-8df6-8d44b25b5a8d" />
 
 次に右の画面から Jupyter Lab をクリックします。
-<img width="2198" height="506" alt="image" src="https://github.com/user-attachments/assets/4b7ef17b-43bb-4a07-a2f6-6477a8951e1c" />
+<img width="598" height="506" alt="image" src="https://github.com/user-attachments/assets/4b7ef17b-43bb-4a07-a2f6-6477a8951e1c" />
 
 Jupyter Labを開いたらconda_pytorch_p310を選んでノートブックを作成します。
-<img width="1900" height="742" alt="image" src="https://github.com/user-attachments/assets/40121107-5255-450d-babb-c8203772df41" />
+<img width="600" height="742" alt="image" src="https://github.com/user-attachments/assets/40121107-5255-450d-babb-c8203772df41" />
 
 ### Jupter Lab での演習
 以下はノートブックを作成しながら演習を行います。
